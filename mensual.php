@@ -15,62 +15,27 @@
 <?php
 $year=$_REQUEST['year'];
 $mes=$_REQUEST['month'];
-// Creamos el arreglo con los mese y fechas correspondientes
+// Creamos el arreglo con los meses y fechas correspondientes
     $month[1] = array("01-01", "02-01"); $month[2] = array("02-01", "03-01");
     $month[3] = array("03-01", "04-01"); $month[4] = array("04-01", "05-01");
     $month[5] = array("05-01", "06-01"); $month[6] = array("06-01", "07-01");
     $month[7] = array("07-01", "08-01"); $month[8] = array("08-01", "09-01");
     $month[9] = array("09-01", "10-01"); $month[10] = array("10-01", "11-01");
     $month[11] = array("11-01", "12-01"); $month[12] = array("12-01", "01-01");
-if ($mes==1) {
-    $diainicio = "$year-".$month[1][0];
-    $diafin = "$year-".$month[1][1];
+
+for ($i=1; $i < 12; $i++) { 
+    if ($mes == $i){
+        $diainicio = "$year-".$month[$i][0];
+        $diafin = "$year-".$month[$i][1];
+    }   
 }
-if ($mes==2) {
-    $diainicio = "$year-".$month[2][0];
-    $diafin = "$year-".$month[2][1];
-}
-if ($mes==3) {
-    $diainicio = "$year-".$month[3][0];
-    $diafin = "$year-".$month[3][1];
-}
-if ($mes==4) {
-    $diainicio = "$year-".$month[4][0];
-    $diafin = "$year-".$month[4][1];
-}
-if ($mes==5) {
-    $diainicio = "$year-".$month[5][0];
-    $diafin = "$year-".$month[5][1];
-}
-if ($mes==6) {
-    $diainicio = "$year-".$month[6][0];
-    $diafin = "$year-".$month[6][1];
-}
-if ($month==7) {
-    $diainicio = "$year-".$month[7][0];
-    $diafin = "$year-".$month[7][1];
-}
-if ($mes==8) {
-    $diainicio = "$year-".$month[8][0];
-    $diafin = "$year-".$month[8][1];
-}
-if ($mes==9) {
-    $diainicio = "$year-".$month[9][0];
-    $diafin = "$year-".$month[9][1];
-}
-if ($mes==10) {
-    $diainicio = "$year-".$month[10][0];
-    $diafin = "$year-".$month[10][1];
-}
-if ($mes==11) {
-    $diainicio = "$year-".$month[11][0];
-    $diafin = "$year-".$month[11][1];
-}
-if ($mes==12) {
+// Creamos if especifico para diciembre al cambiar fecha fin
+if ($mes == 12){
     $yearEnd = $year+1;
     $diainicio = "$year-".$month[12][0];
     $diafin = "$yearEnd-".$month[12][1];
 }
+
 // Damos formato de fecha
 $fecha=$mes.'_'.$year;
 // Abrimos el archivo //
@@ -240,7 +205,7 @@ CREATE INDEX index_estadisticashis_paradas_$fecha
     TABLESPACE pg_default;
 
 -- &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&\n");
-fclose($documento); //Cerramos el documento*/
+fclose($documento); //Cerramos el documento
 
 // Js para copiar texto
 PRINT <<<HERE

@@ -15,7 +15,7 @@
 <?php
 $year=$_REQUEST['year'];
 $week=$_REQUEST['week'];
-///// Definiendo el areglo/////
+///// Definiendo el arreglo/////
                 $semana[1] = array("01-01", "01-08"); $semana[2] = array("01-08", "01-15");
                 $semana[3] = array("01-15", "01-22"); $semana[4] = array("01-22", "01-29");
                 $semana[5] = array("01-29", "02-05"); $semana[6] = array("02-05", "02-12");
@@ -44,219 +44,18 @@ $week=$_REQUEST['week'];
                 $semana[51] = array("12-17", "12-24"); $semana[52] = array("12-24", "12-31");
                 $semana[53] = array("12-31", "01-07");
 
-if ($week==1) {
-    $diainicio = "$year-".$semana[1][0];
-    $diafin = "$year-".$semana[1][1];
+for ($i=1; $i < 53; $i++) { 
+    if ($week == $i){
+        $diainicio = "$year-".$semana[$i][0];
+        $diafin = "$year-".$semana[$i][1];
+    }   
 }
-if ($week==2) {
-    $diainicio = "$year-".$semana[2][0];
-    $diafin = "$year-".$semana[2][1];
-}
-if ($week==3) {
-    $diainicio = "$year-".$semana[3][0];
-    $diafin = "$year-".$semana[3][1];
-}
-if ($week==4) {
-    $diainicio = "$year-".$semana[4][0];
-    $diafin = "$year-".$semana[4][1];
-}
-if ($week==5) {
-    $diainicio = "$year-".$semana[5][0];
-    $diafin = "$year-".$semana[5][1];
-}
-if ($week==6) {
-    $diainicio = "$year-".$semana[6][0];
-    $diafin = "$year-".$semana[6][1];
-}
-if ($week==7) {
-    $diainicio = "$year-".$semana[7][0];
-    $diafin = "$year-".$semana[7][1];
-}
-if ($week==8) {
-    $diainicio = "$year-".$semana[8][0];
-    $diafin = "$year-".$semana[8][1];
-}
-if ($week==9) {
-    $diainicio = "$year-".$semana[9][0];
-    $diafin = "$year-".$semana[9][1];
-}
-if ($week==10) {
-    $diainicio = "$year-".$semana[10][0];
-    $diafin = "$year-".$semana[10][1];
-}
-if ($week==11) {
-    $diainicio = "$year-".$semana[11][0];
-    $diafin = "$year-".$semana[11][1];
-}
-if ($week==12) {
-    $diainicio = "$year-".$semana[12][0];
-    $diafin = "$year-".$semana[12][1];
-}
-if ($week==13) {
-    $diainicio = "$year-".$semana[13][0];
-    $diafin = "$year-".$semana[13][1];
-}
-if ($week==14) {
-    $diainicio = "$year-".$semana[14][0];
-    $diafin = "$year-".$semana[14][1];
-}
-if ($week==15) {
-    $diainicio = "$year-".$semana[15][0];
-    $diafin = "$year-".$semana[15][1];
-}
-if ($week==16) {
-    $diainicio = "$year-".$semana[16][0];
-    $diafin = "$year-".$semana[16][1];
-}
-if ($week==17) {
-    $diainicio = "$year-".$semana[17][0];
-    $diafin = "$year-".$semana[17][1];
-}
-if ($week==18) {
-    $diainicio = "$year-".$semana[18][0];
-    $diafin = "$year-".$semana[18][1];
-}
-if ($week==19) {
-    $diainicio = "$year-".$semana[19][0];
-    $diafin = "$year-".$semana[19][1];
-}
-if ($week==20) {
-    $diainicio = "$year-".$semana[20][0];
-    $diafin = "$year-".$semana[20][1];
-}
-if ($week==21) {
-    $diainicio = "$year-".$semana[21][0];
-    $diafin = "$year-".$semana[21][1];
-}
-if ($week==22) {
-    $diainicio = "$year-".$semana[22][0];
-    $diafin = "$year-".$semana[22][1];
-}
-if ($week==23) {
-    $diainicio = "$year-".$semana[23][0];
-    $diafin = "$year-".$semana[23][1];
-}
-if ($week==24) {
-    $diainicio = "$year-".$semana[24][0];
-    $diafin = "$year-".$semana[24][1];
-}
-if ($week==25) {
-    $diainicio = "$year-".$semana[25][0];
-    $diafin = "$year-".$semana[25][1];
-}
-if ($week==26) {
-    $diainicio = "$year-".$semana[26][0];
-    $diafin = "$year-".$semana[26][1];
-}
-if ($week==27) {
-    $diainicio = "$year-".$semana[27][0];
-    $diafin = "$year-".$semana[27][1];
-}
-if ($week==28) {
-    $diainicio = "$year-".$semana[28][0];
-    $diafin = "$year-".$semana[28][1];
-}
-if ($week==29) {
-    $diainicio = "$year-".$semana[29][0];
-    $diafin = "$year-".$semana[29][1];
-}
-if ($week==30) {
-    $diainicio = "$year-".$semana[30][0];
-    $diafin = "$year-".$semana[30][1];
-}
-if ($week==31) {
-    $diainicio = "$year-".$semana[31][0];
-    $diafin = "$year-".$semana[31][1];
-}
-if ($week==32) {
-    $diainicio = "$year-".$semana[32][0];
-    $diafin = "$year-".$semana[32][1];
-}
-if ($week==33) {
-    $diainicio = "$year-".$semana[33][0];
-    $diafin = "$year-".$semana[33][1];
-}
-if ($week==34) {
-    $diainicio = "$year-".$semana[34][0];
-    $diafin = "$year-".$semana[34][1];
-}
-if ($week==35) {
-    $diainicio = "$year-".$semana[35][0];
-    $diafin = "$year-".$semana[35][1];
-}
-if ($week==36) {
-    $diainicio = "$year-".$semana[36][0];
-    $diafin = "$year-".$semana[36][1];
-}
-if ($week==37) {
-    $diainicio = "$year-".$semana[37][0];
-    $diafin = "$year-".$semana[37][1];
-}
-if ($week==38) {
-    $diainicio = "$year-".$semana[38][0];
-    $diafin = "$year-".$semana[38][1];
-}
-if ($week==39) {
-    $diainicio = "$year-".$semana[39][0];
-    $diafin = "$year-".$semana[39][1];
-}
-if ($week==40) {
-    $diainicio = "$year-".$semana[40][0];
-    $diafin = "$year-".$semana[40][1];
-}
-if ($week==41) {
-    $diainicio = "$year-".$semana[41][0];
-    $diafin = "$year-".$semana[41][1];
-}
-if ($week==42) {
-    $diainicio = "$year-".$semana[42][0];
-    $diafin = "$year-".$semana[42][1];
-}
-if ($week==43) {
-    $diainicio = "$year-".$semana[43][0];
-    $diafin = "$year-".$semana[43][1];
-}
-if ($week==44) {
-    $diainicio = "$year-".$semana[44][0];
-    $diafin = "$year-".$semana[44][1];
-}
-if ($week==45) {
-    $diainicio = "$year-".$semana[45][0];
-    $diafin = "$year-".$semana[45][1];
-}
-if ($week==46) {
-    $diainicio = "$year-".$semana[46][0];
-    $diafin = "$year-".$semana[46][1];
-}
-if ($week==47) {
-    $diainicio = "$year-".$semana[47][0];
-    $diafin = "$year-".$semana[47][1];
-}
-if ($week==48) {
-    $diainicio = "$year-".$semana[48][0];
-    $diafin = "$year-".$semana[48][1];
-}
-if ($week==49) {
-    $diainicio = "$year-".$semana[49][0];
-    $diafin = "$year-".$semana[49][1];
-}
-if ($week==50) {
-    $diainicio = "$year-".$semana[50][0];
-    $diafin = "$year-".$semana[50][1];
-}
-if ($week==51) {
-    $diainicio = "$year-".$semana[51][0];
-    $diafin = "$year-".$semana[51][1];
-}
-if ($week==52) {
-    $diainicio = "$year-".$semana[52][0];
-    $diafin = "$year-".$semana[52][1];
-}
-if ($week==53) {
+// Creamos if especifico para semana 53 al cambiar fecha fin
+if ($week == 53){
     $yearEnd = $year+1;
     $diainicio = "$year-".$semana[53][0];
     $diafin = "$yearEnd-".$semana[53][1];
-}
+} 
 /// Creamos documento ///
 $archivo=fopen('TablasSemanales.sql', 'w') or die('Error al crear archivo');
 /// Capturamos info del usuario ///
